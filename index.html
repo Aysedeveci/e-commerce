@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marketplace</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Marketplace</h1>
+    </header>
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="productForm">
+          <label for="img">Resim URL:</label><br />
+          <input type="text" id="img" name="img" /><br />
+          <label for="title">Başlık:</label><br />
+          <input type="text" id="title" name="title" /><br />
+          <label for="price">Fiyat:</label><br />
+          <input type="text" id="price" name="price" /><br />
+          <label for="number">İletişim Numarası:</label><br />
+          <input type="text" id="number" name="number" /><br />
+          <input type="submit" value="Ekle" />
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <input
+        type="text"
+        id="search"
+        placeholder="Arama..."
+        onkeyup="searchProduct(this.value)"
+      />
+      <button id="newProduct">Yeni Ürün Ekle</button>
+      <div id="productList" class="grid"></div>
+    </div>
+    <footer>
+      <p>© 2023 Marketplace</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
